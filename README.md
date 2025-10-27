@@ -11,7 +11,7 @@ This framework evaluates AI-generated clinical notes by comparing them to source
 
 **Hybrid Approach**: Fast deterministic NER (Task 1) detects missing information, while LLM-as-judge with chain-poll validation (Task 2) catches hallucinations and clinical accuracy issues.
 
-**Performance**: 134.7 seconds for 10 notes (~13.4s/note) on single T4 GPU. Task 2 (LLM polling) is the bottleneck; can be 2-3x faster with optimized serving (Groq) or lighter models.
+**Performance**: 134.7 seconds for 10 notes (~13.4s/note) on single T4 GPU. Task 2 (LLM Reasoning) is the bottleneck; can be 2-3x faster with optimized serving (Groq) or lighter models.
 
 ---
 
