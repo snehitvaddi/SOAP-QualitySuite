@@ -441,7 +441,7 @@ document_id,coverage_score,criticality_score,hallucination_rate
 - Future: Integrate FDA dosage guidelines, drug interaction databases
 
 **Truncation**
-- Task 1 truncates at 2000 chars (10-20% of transcripts)
+- Task 1 truncates at ~2000 chars ((DeBERTa, BioClinical's context window is 512 tokens)
 - Solution: Increase MAX_TEXT_LENGTH or sliding window or use larger context LLM.
 
 **Performance Bottleneck**
