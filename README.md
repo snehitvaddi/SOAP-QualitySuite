@@ -1,8 +1,9 @@
 # SOAP-QualitySuite
 *Framework for evaluating AI-generated SOAP notes via NER validation and LLM-based Detect missing information, hallucinations, and clinical accuracy issues.*
-
-[![Open SOAP-QualitySuite In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/172aCg3kbbOIz5b8Y3N5iHi_xL_wheHrA?usp=sharing)
-[![Open Synthetic Hallucination Dataset Generator In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1MfH24U08yyAt9iZFKZxViKEzoYe4-t57?usp=sharing)
+| Notebook Title                             | Link                                                                 |
+|-------------------------------------------|----------------------------------------------------------------------|
+| **SOAP-Quality Suite**                    | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/172aCg3kbbOIz5b8Y3N5iHi_xL_wheHrA?usp=sharing) |
+| **Synthetic Hallucination Dataset Generator** | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1MfH24U08yyAt9iZFKZxViKEzoYe4-t57?usp=sharing) |
 
 This framework evaluates AI-generated clinical notes by comparing them to source transcripts. It addresses three critical quality issues:
 
@@ -13,12 +14,7 @@ This framework evaluates AI-generated clinical notes by comparing them to source
 **Hybrid Approach**: Fast deterministic NER (Task 1) detects missing information, while LLM-as-judge with chain-poll validation (Task 2) catches hallucinations and clinical accuracy issues.
 
 **Performance**: 134.7 seconds for 10 notes (~13.4s/note) on single T4 GPU. Task 2 (LLM Reasoning) is the bottleneck; can be 2-3x faster with optimized serving (Groq) or lighter models.
-```
-**Note:**
-We’ve published a synthetic evaluation dataset for monitoring hallucination and accuracy in clinical-note generation:  
-- Dataset: [SnehitVaddi/medical-soap-hallucination-eval](https://huggingface.co/datasets/SnehitVaddi/medical-soap-hallucination-eval) — includes **30 notes** with three families of errors: Missing Information (10), Fabricated Information (10), Clinical Inaccuracies (10).  
-- Code: [Colab: Synthetic Hallucination Dataset Generator](https://colab.research.google.com/drive/1MfH24U08yyAt9iZFKZxViKEzoYe4-t57?usp=sharing) — script for corrupting SOAP notes via injection of hallucinated/omitted facts for evaluation.  
-```
+
 ---
 
 ## Architecture
