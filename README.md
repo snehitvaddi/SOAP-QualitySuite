@@ -15,9 +15,16 @@ This framework evaluates AI-generated clinical notes by comparing them to source
 
 **Performance**: 134.7 seconds for 10 notes (~13.4s/note) on single T4 GPU. Task 2 (LLM Reasoning) is the bottleneck; can be 2-3x faster with optimized serving (Groq) or lighter models.
 
+**Result files**:
+| File Name                        | GitHub Link                                                                 |
+|----------------------------------|------------------------------------------------------------------------------|
+| **ner_evaluation_summary.csv**   | [View on GitHub](https://github.com/snehitvaddi/SOAP-QualitySuite/blob/main/ner_evaluation_summary.csv) |
+| **ner_entity_matches.csv**       | [View on GitHub](https://github.com/snehitvaddi/SOAP-QualitySuite/blob/main/ner_entity_matches.csv) |
+| **lynx_per_note_summary.csv**    | [View on GitHub](https://github.com/snehitvaddi/SOAP-QualitySuite/blob/main/lynx_per_note_summary.csv) |
+| **lynx_hallucination_results.csv** | [View on GitHub](https://github.com/snehitvaddi/SOAP-QualitySuite/blob/main/lynx_hallucination_results.csv) |
 ---
 
-## Architecture
+## Overall Architecture
 
 ```mermaid
 graph LR
@@ -397,11 +404,6 @@ document_id,coverage_score,criticality_score,hallucination_rate
 ## Strengths & Limitations
 
 ### ✅ Where This Excels
-
-**Speed & Cost**
-- 100 notes in 15 min vs hours of manual review
-- $10 vs $5000+ for human evaluation
-- Suitable for CI/CD and production monitoring
 
 **Comprehensive Coverage**
 - Task 1: Catches missing medications, diagnoses (entity-level)
