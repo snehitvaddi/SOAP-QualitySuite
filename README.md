@@ -463,7 +463,6 @@ document_id,coverage_score,criticality_score,hallucination_rate
 - **RAG Cosine Similarity**: Embed claims and transcript, use similarity threshold  
   "reports pain" vs "denies pain" yields 0.94 similarity in some cases, opposite meanings too close.
 ---
-
 ## License & Citation
 
 MIT License. Built with models from HuggingFace:
