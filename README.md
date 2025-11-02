@@ -212,7 +212,7 @@ graph LR
     E -->|pos=PASS<br/>neg=PASS| H[⚠ Ambiguous]
     E -->|pos=FAIL<br/>neg=FAIL| I[? Unclear]
     
-    F --> J[Metrics]
+    F --> J[Hallucination Rate<br/>Accuracy Rate<br/>Ambiguity Rate]
     G --> J
     H --> J
     I --> J
