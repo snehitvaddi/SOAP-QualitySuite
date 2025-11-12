@@ -204,7 +204,7 @@ Missing Low: 3 (left arm, family history, radiation details)
 graph LR
     A[SOAP Note] --> B[Groq:<br/>Extract 10<br/>Atomic Claims]
     B --> C[Generate<br/>Probe Pairs<br/>pos + neg]
-    C --> D[LYNX<br/>Validates<br/>Each Probe]
+    C --> D[LYNX<br/>Validates<br/>Each Probe wrp. Transcript]
     D --> E{Classification}
     
     E -->|pos=PASS<br/>neg=FAIL| F[✓ Supported]
