@@ -205,7 +205,7 @@ graph LR
     A[SOAP Note] --> B[Groq:<br/>Extract 10<br/>Atomic Claims]
     B --> C[Generate<br/>Probe Pairs<br/>pos + neg]
     C --> D[LYNX<br/>Validates<br/>Each Probe wrp. Transcript]
-    D --> E{Classification}
+    D --> E[Classification<br/>of Atomic Claims<br/>POS & NEG QNA Probes]
     
     E -->|pos=PASS<br/>neg=FAIL| F[✓ Supported]
     E -->|pos=FAIL<br/>neg=PASS| G[✗ Hallucination]
