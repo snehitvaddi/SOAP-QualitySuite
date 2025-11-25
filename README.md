@@ -1,4 +1,4 @@
-# SOAP-QualitySuite
+# MEDHALT - Medical Hallucination Detection and Validation Suite
 *Framework for evaluating AI-generated SOAP notes via NER validation and LLM-based Detect missing information, hallucinations, and clinical accuracy issues.*
 | Notebook Title                             | Link                                                                 |
 |-------------------------------------------|----------------------------------------------------------------------|
